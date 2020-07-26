@@ -1,89 +1,93 @@
-body{
-    background: #fffff8;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
 }
 
-#app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #d2a985;
+}
+
+#app {
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
-}
-
-.holder{
-
-}
-
-.entry{
-    background: rgba(59, 74, 107, .4);
-}
-
-#entryHolder{
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .headline {
-
+    font-size: 30px;
+    background-color: #913639;
+    color: #e9c429;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
 }
-.title{
 
+.holder,
+.holder .feel,
+.holder .country,
+.holder .zip,
+.holder .entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.holder.entry {
+    margin-top: 10px;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
+label {
+    display: block;
     font-size: 27px;
+    text-align: center;
+    margin-bottom: 2px;
 }
 
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
+#country {
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
+    padding: 2px;
+}
+
+input {
+    display: block;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    padding: 2px;
+}
+
+button {
+    margin-top: 10px;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    background-color: #913639;
+    color: #e9c429;
     border: none;
 }
 
-button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
+button:hover {
+    cursor: pointer;
 }
-h1{
+
+h1 {
     font-size: 36px;
 }
 
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
+textarea {
+    height: 100px;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
+    padding: 2px;
 }
+
 /* Reset style for HTML element on active to have no border*/
 input:focus,
 select:focus,
@@ -91,21 +95,50 @@ textarea:focus,
 button:focus {
     outline: none;
 }
+
 /* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
+::placeholder { /* Firefox, Chrome, Opera */
     font-family: 'Oswald', sans-serif;
+}
 
-} 
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
     font-family: 'Oswald', sans-serif;
+}
 
-} 
-  
-::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
+::-ms-input-placeholder { /* Microsoft Edge */
     font-family: 'Oswald', sans-serif;
+}
 
-} 
+.entry {
+    padding: 5px;
+    width: 100%;
+    background-color: #d2a985;
+    display: flex;
+    flex-direction: column;
+}
+
+#entryholder {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#date, #temp, #content {
+    padding: 30px;
+    background-color: #226ba3;
+    color: #d2a985;
+    margin: 5px 0;
+    width: 48%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#date, #temp {
+    font-size: 30px;
+}
+
+#content {
+    width: 100%;
+    margin: 0;
+}
