@@ -35,3 +35,5 @@ Then, on the terminal type `nodemon server.js`
 ## Tech used
 - JavaScript, Node.js, Express, Fetch API, CSS, HTML
 
+## Screenshots
+![Home Page](https://github.com/dilipagheda/weather-journal-js/blob/master/screenshots/1.PNG)
